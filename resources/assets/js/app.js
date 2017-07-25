@@ -1,4 +1,5 @@
 
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -15,7 +16,10 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+ Vue.component('example', require('./components/Example.vue'));
+ Vue.component('chat-message', require('./components/ChatMessage.vue'));
+ Vue.component('chat-log', require('./components/ChatLog.vue'));
+Vue.component('chat-composer', require('./components/ChatComposer.vue'));
 
 const app = new Vue({
     el: '#app'

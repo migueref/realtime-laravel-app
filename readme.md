@@ -1,4 +1,4 @@
-Simple Realtime app built with laravel 5.4
+Simple Real time app built with laravel 5.4
 =====================
 
 Simple real time app to learn basic principles about real time applications.
