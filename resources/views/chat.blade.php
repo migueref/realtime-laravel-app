@@ -10,8 +10,8 @@
     <i><h2>"No matter where in the world you are"</h2></i>
     <div id="app">
       <chat-message></chat-message>
-      <chat-log></chat-log>
-      <chat-composer></chat-composer>
+      <chat-log :messages="messages"></chat-log>
+      <chat-composer v-on:messagesent="addMessage"></chat-composer>
     </div>
     <script src="js/app.js" charset="utf-8"></script>
   </body>

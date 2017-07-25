@@ -13,8 +13,11 @@
     },
     methods: {
       sendMessage() {
-        console.log("message sent! "+this.messageText)
-        this.messageText='';
+        this.$emit('messagesent',{
+          message: this.messageText,
+          author: "Migueref"
+        });
+        this.messageText = '';
       }
     }
   }

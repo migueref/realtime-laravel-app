@@ -804,7 +804,21 @@ Vue.component('chat-log', __webpack_require__(57));
 Vue.component('chat-composer', __webpack_require__(62));
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    messages: [{
+      message: "Hi world",
+      user: "migueref"
+    }, {
+      message: "Hello Miguel",
+      user: "migueref"
+    }]
+  },
+  methods: {
+    addMessage: function addMessage(message) {
+      this.messages.push(message);
+    }
+  }
 });
 
 /***/ }),
@@ -42531,7 +42545,7 @@ exports = module.exports = __webpack_require__(42)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -42549,17 +42563,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      messages: [{
-        message: "Hi world",
-        user: "migueref"
-      }, {
-        message: "Hello Miguel",
-        user: "migueref"
-      }]
-    };
-  }
+  props: ['messages']
 });
 
 /***/ }),
@@ -42692,7 +42696,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   methods: {
     sendMessage: function sendMessage() {
-      console.log("message sent! " + this.messageText);
+      this.$emit('messagesent', {
+        message: this.messageText,
+        author: "Migueref"
+      });
       this.messageText = '';
     }
   }

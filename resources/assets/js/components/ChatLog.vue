@@ -5,20 +5,7 @@
 </template>
 <script>
   export default {
-    data() {
-      return {
-        messages: [
-          {
-              message: "Hi world",
-              user: "migueref"
-          },
-          {
-            message: "Hello Miguel",
-            user: "migueref"
-          }
-        ]
-      }
-    }
+    props: ['messages']
   }
 </script>
 <style lang="css">
